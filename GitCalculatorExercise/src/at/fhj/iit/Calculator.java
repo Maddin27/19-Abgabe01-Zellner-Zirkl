@@ -76,7 +76,14 @@ public interface Calculator {
 	
 	void addValue(int value)
 	{
-	calc.add(value);
+		calc.add(value);
 	}
 
-}
+	public int sum(Calculator c){
+		int result = 0;
+		for(int i = 0 ; i < c.length; i++) {
+			result += c[i];
+		}
+		return result;
+
+	}
