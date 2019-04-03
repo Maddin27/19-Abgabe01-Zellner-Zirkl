@@ -1,3 +1,8 @@
+/*
+ * Authors: Martin Zellner, Lisa Zirkl
+ * Task: Simulation Calclator
+ * Final Changes: 03.04.2019
+ */
 package at.fhj.iit;
 
 import java.util.ArrayList;

@@ -3,9 +3,8 @@ package at.fhj.iit;
 public interface Calculator {
 
 	/**
-	 * Student 1
-	 * Student 2+
-	 * Student 3 (OPTIONAL)
+	 * Student 1: Martin Zellner
+	 * Student 2: Lisa Zirkl
 	 * <p>
 	 * TODO Instruction for GIT Lab for Grading GIT Part of Configuration Management
 	 * - copy content of this git repository / zip file
