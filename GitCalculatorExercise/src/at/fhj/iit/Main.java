@@ -34,7 +34,14 @@ public class Main {
 
 			@Override
 			public int getMinimum() {
-				int min = 0;
+				int min = Integer.MAX_VALUE;
+				for(int i = 0; i < c.size(); i++)
+				{
+					if(c.get(i) < min)
+					{
+						min = c.get(i);
+					}
+				}
 				return min;
 			}
 
