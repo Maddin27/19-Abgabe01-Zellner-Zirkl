@@ -3,7 +3,7 @@ package at.fhj.iit;
 import java.util.ArrayList;
 
 public class CalculatorImpl implements Calculator {
-	//Arraylist for all methods
+	
 	ArrayList<Integer> c = new ArrayList<Integer>();
 	
 	//returns the sum of all integers added
