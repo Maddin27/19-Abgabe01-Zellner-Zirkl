@@ -5,59 +5,13 @@
  */
 package at.fhj.iit;
 
-import java.util.ArrayList;
-
 public class Main {
 
 	public static void main(String[] args) {
 		
-		ArrayList<Integer> c = new ArrayList<Integer>();
-		
-		Calculator calc = new Calculator() {
-			//returns the sum of the added integers 
-			@Override
-			public int sum() {
-				int sum = 0;
-				for(int i = 0; i < c.size(); i++)
-				{
-					sum += c.get(i);
-				}
-				return sum;
-			}
-			//returns the maximum of all added integers
-			@Override
-			public int getMaximum() {
-				int max = 0;
-				for(int i = 0; i < c.size(); i++)
-				{
-					if(c.get(i) > max)
-					{
-						max = c.get(i);
-					}
-				}
-				return max;
-			}
-			//returns the minimum of the added integers
-			@Override
-			public int getMinimum() {
-				int min = Integer.MAX_VALUE;
-				for(int i = 0; i < c.size(); i++)
-				{
-					if(c.get(i) < min)
-					{
-						min = c.get(i);
-					}
-				}
-				return min;
-			}
-			//method to add integers to ArrayList
-			@Override
-			public void addValue(int value) {
-				c.add(value);
-			}
-			
-		};
-		
+
+		Calculator calc = new CalculatorImpl();
+	
 		calc.addValue(20);	// currently highest number
 		calc.addValue(4);	// currently lowester number
 		
@@ -72,7 +26,5 @@ public class Main {
 		System.out.println("Maximum is: "+calc.getMaximum());
 		// output sum of all numbers
 		System.out.println("Sum is: "+calc.sum());
-
 	}
-
 }
