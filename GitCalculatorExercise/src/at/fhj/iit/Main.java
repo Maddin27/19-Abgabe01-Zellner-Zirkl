@@ -11,8 +11,12 @@ public class Main {
 		Calculator calc = new Calculator() {
 			@Override
 			public int sum() {
-				
-				return 0;
+				int sum = 0;
+				for(int i = 0; i < c.size(); i++)
+				{
+					sum += c.get(i);
+				}
+				return sum;
 			}
 
 			@Override
@@ -43,18 +47,18 @@ public class Main {
 		
 		calc.addValue(20);	// currently highest number
 		calc.addValue(4);	// currently lowester number
-		calc.addValue(16);
+		
 		
 		// add other integers
 		calc.addValue(13);
 		calc.addValue(5);
 		calc.addValue(23);
 		// output lowest number 
-		System.out.println(calc.getMinimum());
+		System.out.println("Minimum is: "+calc.getMinimum());
 		// output highest number
-		System.out.print(calc.getMaximum());
+		System.out.println("Maximum is: "+calc.getMaximum());
 		// output sum of all numbers
-		
+		System.out.println("Sum is: "+calc.sum());
 
 	}
 
