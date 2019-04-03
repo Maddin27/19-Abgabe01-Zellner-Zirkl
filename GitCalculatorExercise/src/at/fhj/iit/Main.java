@@ -14,6 +14,7 @@ public class Main {
 		ArrayList<Integer> c = new ArrayList<Integer>();
 		
 		Calculator calc = new Calculator() {
+			//returns the sum of the added integers 
 			@Override
 			public int sum() {
 				int sum = 0;
@@ -23,7 +24,7 @@ public class Main {
 				}
 				return sum;
 			}
-
+			//returns the maximum of all added integers
 			@Override
 			public int getMaximum() {
 				int max = 0;
@@ -36,7 +37,7 @@ public class Main {
 				}
 				return max;
 			}
-
+			//returns the minimum of the added integers
 			@Override
 			public int getMinimum() {
 				int min = Integer.MAX_VALUE;
@@ -49,7 +50,7 @@ public class Main {
 				}
 				return min;
 			}
-
+			//method to add integers to ArrayList
 			@Override
 			public void addValue(int value) {
 				c.add(value);
