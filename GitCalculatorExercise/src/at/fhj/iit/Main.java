@@ -6,15 +6,26 @@ public class Main {
 
 	public static void main(String[] args) {
 		
+		ArrayList<Integer> c = new ArrayList<Integer>();
+		
 		Calculator calc = new Calculator() {
 			@Override
 			public int sum() {
+				
 				return 0;
 			}
 
 			@Override
 			public int getMaximum() {
-				return 0;
+				int max = 0;
+				for(int i = 0; i < c.size(); i++)
+				{
+					if(c.get(i) > max)
+					{
+						max = c.get(i);
+					}
+				}
+				return max;
 			}
 
 			@Override
@@ -25,9 +36,9 @@ public class Main {
 
 			@Override
 			public void addValue(int value) {
-				ArrayList c = new ArrayList();
 				c.add(value);
 			}
+			
 		};
 		
 		calc.addValue(20);	// currently highest number
@@ -39,10 +50,11 @@ public class Main {
 		calc.addValue(5);
 		calc.addValue(23);
 		// output lowest number 
-		calc.getMinimum();
+		System.out.println(calc.getMinimum());
 		// output highest number
-		calc.getMaximum();
+		System.out.print(calc.getMaximum());
 		// output sum of all numbers
+		
 
 	}
 
